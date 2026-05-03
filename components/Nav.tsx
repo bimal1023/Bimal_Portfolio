@@ -1,6 +1,9 @@
 'use client'
 
+import { useSounds } from '@/hooks/useSound'
+
 export default function Nav() {
+  const { playPing } = useSounds()
   return (
     <nav
       style={{
@@ -80,6 +83,7 @@ export default function Nav() {
           <a
             href="#contact"
             className="nav-cta"
+            onClick={playPing}
             style={{
               background: 'var(--ink)',
               color: 'white',

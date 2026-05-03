@@ -1,10 +1,12 @@
 'use client'
 
 import { useScrollReveal } from '@/hooks/useScrollReveal'
+import { useSounds } from '@/hooks/useSound'
 import { projects } from '@/data/projects'
 
 export default function Projects() {
   useScrollReveal()
+  const { playPop } = useSounds()
 
   return (
     <section
@@ -80,6 +82,7 @@ export default function Projects() {
               } as React.CSSProperties
             }
             onMouseEnter={(e) => {
+              playPop()
               const el = e.currentTarget as HTMLDivElement
               el.style.transform = 'translateY(-6px)'
               el.style.boxShadow = '0 20px 56px rgba(0,0,0,0.12)'
