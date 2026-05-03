@@ -34,4 +34,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Live Demo
 
-[stellanetconnect.com](https://www.stellanetconnect.com)
+[bimalkumal7.com.np](https://bimalkumal7.com.np)
