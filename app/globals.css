@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sky-light: #e8f4fd;
+  --sky-mid: #c8e6f7;
+  --sky-deep: #a8d4f0;
+  --cloud: #ffffff;
+  --ink: #1a1a2e;
+  --ink-soft: #3d3d5c;
+  --accent-pink: #ff6b9d;
+  --accent-purple: #8b5cf6;
+  --accent-yellow: #fbbf24;
+  --accent-green: #34d399;
+  --accent-blue: #3b82f6;
+  --accent-orange: #f97316;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --font-display: 'Cabinet Grotesk', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+  background: var(--sky-light);
+  color: var(--ink);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── NAV LINK UNDERLINE ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-pink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── AVATAR BLOB ── */
+.avatar-blob {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  animation: blob-morph 6s ease-in-out infinite;
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.35);
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  max-width: 700px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-purple) 0%, var(--accent-pink) 100%);
+  border-radius: 2px;
+}
+
+/* ── TIMELINE LIST ITEMS ── */
+.timeline-body ul {
+  list-style: none;
+  padding: 0;
+}
+.timeline-body li {
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 6px;
+}
+.timeline-body li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-pink);
+  font-size: 0.8rem;
+  top: 1px;
+}
+
+/* ── ABOUT CARD PSEUDO ── */
+.about-card {
+  position: relative;
+  overflow: hidden;
+}
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* ── PROJECT CARD HOVER GRADIENT ── */
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--card-accent-color, #8b5cf6) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 24px;
+  pointer-events: none;
+}
+.project-card:hover::before {
+  opacity: 0.05;
+}
+
+/* ── NAV CTA ── */
+.nav-cta::after {
+  display: none !important;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links-mobile {
+    display: none;
+  }
+}
