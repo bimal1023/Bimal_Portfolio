@@ -1,7 +1,7 @@
 'use client'
 
 import { useScrollReveal } from '@/hooks/useScrollReveal'
-import { education, teachingAndAwards } from '@/data/experience'
+import { workExperience, education, teachingAndAwards } from '@/data/experience'
 import type { TimelineItem } from '@/data/experience'
 
 function TimelineBlock({ items }: { items: TimelineItem[] }) {
@@ -127,8 +127,25 @@ export default function Experience() {
             marginBottom: '56px',
           }}
         >
-          Education, research, and teaching experience.
+          Professional, academic, and teaching experience.
         </p>
+      </div>
+
+      <div style={{ marginBottom: '72px', maxWidth: '1000px' }}>
+        <h3
+          style={{
+            fontSize: '0.8rem',
+            fontWeight: 700,
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            color: 'var(--accent-blue)',
+            marginBottom: '28px',
+            fontFamily: 'var(--font-mono)',
+          }}
+        >
+          Experience
+        </h3>
+        <TimelineBlock items={workExperience} />
       </div>
 
       <div

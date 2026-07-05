@@ -7,17 +7,31 @@ export interface TimelineItem {
   animationDelay?: string
 }
 
+export const workExperience: TimelineItem[] = [
+  {
+    date: 'May 2026 – Present',
+    title: 'IT Intelligent Automation Intern',
+    org: 'TransRe · Brooklyn, NY',
+    bullets: [
+      "Architected a production FinOps AI agent using LangGraph's supervisor pattern to orchestrate parallel sub-agents aggregating cost data across 3 cloud vendors via custom FastMCP servers (Azure, AWS, Anthropic)",
+      'Automated monthly financial reporting with Excel/PDF cost summaries over a Celery/Redis async pipeline — cutting manual reporting from 3–4 days to fully automated delivery',
+      'Deployed the agent stack on AKS with ACR, Workload Identity, Key Vault CSI Driver, KEDA autoscaling, and Ingress NGINX for production-grade infrastructure',
+    ],
+    dotColor: '#8b5cf6',
+  },
+]
+
 export const education: TimelineItem[] = [
   {
     date: 'Expected May 2027',
-    title: 'B.S. Computer Science',
+    title: 'B.S. Computer Science & Data Science',
     org: "St. Joseph's University, New York",
     bullets: [
-      "Dean's List (3 consecutive semesters)",
-      '90% tuition scholarship — academic merit & leadership',
-      'Relevant: Data Structures, Algorithms, OS, Database Systems, Software Engineering',
+      'GPA 3.948',
+      "Dean's List (6 consecutive semesters) — top 5% of students",
+      'Relevant: Data Structures & Algorithms, Operating Systems, Database Systems, Software Engineering, Linear Algebra, Probability & Statistics',
     ],
-    dotColor: '#8b5cf6',
+    dotColor: '#3b82f6',
   },
 ]
 
@@ -42,10 +56,10 @@ export const teachingAndAwards: TimelineItem[] = [
     animationDelay: '0.15s',
   },
   {
-    date: '2023 – Stanford Online',
+    date: 'Stanford Online',
     title: 'Supervised Machine Learning',
     org: 'Andrew Ng — Coursera',
-    bullets: ["Completed Stanford's ML specialization by Andrew Ng"],
+    bullets: ["Completed Stanford's supervised ML course by Andrew Ng"],
     dotColor: '#34d399',
     animationDelay: '0.2s',
   },

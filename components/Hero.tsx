@@ -46,7 +46,7 @@ export default function Hero() {
           }}
         >
           <span style={{ fontSize: '0.7rem' }}>✦</span>
-          CS Student &amp; AI Engineer · New York
+          AI Engineer · Automation Intern @ TransRe · NY
         </div>
 
         {/* Avatar */}

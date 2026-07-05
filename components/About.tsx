@@ -73,15 +73,19 @@ export default function About() {
             <p>
               I&apos;m a{' '}
               <strong style={{ color: 'var(--ink)', fontWeight: 700 }}>
-                Computer Science student at St. Joseph&apos;s University, New York
+                Computer Science &amp; Data Science student at St. Joseph&apos;s University, New York
               </strong>
               , passionate about building production-grade AI systems and beautiful software. I focus
               on the intersection of machine learning and practical engineering.
             </p>
             <p style={{ marginTop: '16px' }}>
-              When I&apos;m not training models or debugging edge cases, I&apos;m exploring new
-              frameworks, contributing to open source, and tutoring fellow students in algorithms and
-              programming.
+              Right now I&apos;m an{' '}
+              <strong style={{ color: 'var(--ink)', fontWeight: 700 }}>
+                IT Intelligent Automation Intern at TransRe
+              </strong>
+              , where I architect production AI agents with LangGraph and MCP and ship them on
+              Kubernetes. When I&apos;m not building agents or debugging edge cases, I&apos;m exploring
+              new frameworks and tutoring fellow students in algorithms and programming.
             </p>
             <p style={{ marginTop: '16px' }}>
               I&apos;m seeking opportunities in{' '}
@@ -99,7 +103,7 @@ export default function About() {
               marginTop: '32px',
             }}
           >
-            {['LangChain', 'React', 'Python', 'AWS', 'PyTorch', 'OpenAI APIs'].map((chip) => (
+            {['LangGraph', 'LangChain', 'MCP', 'React', 'Python', 'FastAPI', 'AWS', 'Azure'].map((chip) => (
               <span
                 key={chip}
                 style={{
@@ -131,10 +135,10 @@ export default function About() {
           }}
         >
           {[
-            { num: '6+', label: 'Projects shipped' },
+            { num: '3.95', label: 'GPA · CS & Data Science' },
             { num: '90%', label: 'Tuition scholarship awarded' },
-            { num: '5%', label: "Dean's List — top of class" },
-            { num: '∞', label: 'Curiosity' },
+            { num: '6×', label: "Dean's List — top 5% of class" },
+            { num: '6+', label: 'Projects shipped' },
           ].map((stat, i) => (
             <div
               key={stat.label}
